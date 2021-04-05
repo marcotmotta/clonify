@@ -1,0 +1,41 @@
+.left-bar {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    max-width: 250px;
+    width: 20vw;
+    max-height: 100vh;
+    padding: 15px;
+    color: #bbb;
+
+    .menu {
+        margin-bottom: 40px;
+
+        .tab {
+            padding-left: 30px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            border-radius: 5px;
+            font-weight: bold;
+    
+            &:hover {
+                background: #222;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .playlists {
+        .create-playlist {
+            padding-left: 30px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    }
+
+}
