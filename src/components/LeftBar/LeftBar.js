@@ -14,8 +14,12 @@ export default class LeftBar extends Component {
                 <div className="playlists">
                     <div className="create-playlist"><AddRounded className="icon" fontSize="medium"/>Create playlist</div>
                     <hr></hr>
-                    <div>
-                        Playlists
+                    <div className="list">
+                        {/* query */}
+                        <div>Playlist 1</div>
+                        <div>Playlist 2</div>
+                        <div>Playlist 3</div>
+                        <div>Playlist 4</div>
                     </div>
                 </div>
             </div>

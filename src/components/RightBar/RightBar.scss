@@ -4,8 +4,7 @@
     position: absolute;
     right: 0px;
     background: #111;
-    max-width: 200px;
-    width: 200px;
+    width: 230px;
     max-height: 100vh;
     height: 100vh;
     padding: 15px;
@@ -15,6 +14,14 @@
         color: white;
         font-weight: bold;
         font-size: 110%;
-        margin-bottom: 15px;
+    }
+
+    .friends {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            margin-top: 10px;
+        }
     }
 }
