@@ -9,20 +9,57 @@
     justify-content: space-between;
 
     .song {
-        background: blue;
+        display: flex;
+        align-items: center;
         height: 100%;
         width: 25vw;
+
+        .avatar {
+            margin: 20px;
+        }
+
+        .song-name {
+            font-weight: bold;
+        }
     }
 
     .player-butttons {
-        background: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         height: 100%;
         width: 50vw;
+
+        .actions {
+            display: flex;
+            justify-content: center;
+        }
+
+        .song-bar {
+            display: flex;
+            justify-content: center;
+
+            .progress-bar {
+                margin-left: 20px;
+                margin-right: 20px;
+                width: 60%;
+                background: transparent;
+                color: white;
+            }
+        }
     }
 
     .options {
-        background: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 100%;
         width: 25vw;
+
+        .volume {
+            margin-left: 20px;
+            width: 35%;
+            color: white;
+        }
     }
 }
