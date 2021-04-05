@@ -1,15 +1,12 @@
 import logo from './logo.svg';
 import './App.scss';
 
-//Components
-import Content from "./components/Content/Content"
-import LeftBar from "./components/LeftBar/LeftBar"
+import Home from "./components/Home/Home"
 
 function App() {
   return (
     <div className="App">
-      <LeftBar ></LeftBar>
-      <Content ></Content>
+      <Home ></Home>
     </div>
   );
 }

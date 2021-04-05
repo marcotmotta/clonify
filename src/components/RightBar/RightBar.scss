@@ -1,0 +1,20 @@
+.right-bar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    background: #111;
+    max-width: 200px;
+    width: 200px;
+    max-height: 100vh;
+    height: 100vh;
+    padding: 15px;
+    color: #bbb;
+
+    .title {
+        color: white;
+        font-weight: bold;
+        font-size: 110%;
+        margin-bottom: 15px;
+    }
+}

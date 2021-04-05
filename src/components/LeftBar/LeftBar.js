@@ -11,6 +11,7 @@ export default class LeftBar extends Component {
                 </div>
                 <div className="playlists">
                     <div className="create-playlist">Create playlist</div>
+                    <hr></hr>
                     <div>
                         Playlists
                     </div>
