@@ -11,9 +11,30 @@ export default class RightBar extends Component {
                 <div className="title">Friends activity</div>
                 <div className="friends">
                     {/* query */}
-                    <div><Avatar></Avatar></div>
-                    <div><Avatar></Avatar></div>
-                    <div><Avatar></Avatar></div>
+                    <div className="activity">
+                        <Avatar className="avatar"></Avatar>
+                        <div>
+                            <div className="username">Friend 1</div>
+                            <div className="artist">Blinding Lights</div>
+                            <div className="song">The Weeknd</div>
+                        </div>
+                    </div>
+                    <div className="activity">
+                        <Avatar className="avatar"></Avatar>
+                        <div>
+                            <div className="username">Friend 2</div>
+                            <div className="artist">Blinding Lights</div>
+                            <div className="song">The Weeknd</div>
+                        </div>
+                    </div>
+                    <div className="activity">
+                        <Avatar className="avatar"></Avatar>
+                        <div>
+                            <div className="username">Friend 3</div>
+                            <div className="artist">Blinding Lights</div>
+                            <div className="song">The Weeknd</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -18,8 +18,22 @@
         display: flex;
         flex-direction: column;
 
-        div {
-            margin-top: 10px;
+        .activity {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+
+            .avatar {
+                margin-right: 10px;
+            }
+
+            .username {
+                font-weight: bold;
+            }
+
+            .artist, .song {
+                font-size: 80%;
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ create react app:
 $ npx create-react-app <nome-do-app>
 
 install dependencies:
-$npm install
+$ npm install
 
 run:
 $ npm start
