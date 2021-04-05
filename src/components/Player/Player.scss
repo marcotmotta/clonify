@@ -1,0 +1,28 @@
+.player {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width: 100vw;
+    background: #222;
+    border-top: 1px solid #555;
+    justify-content: space-between;
+
+    .song {
+        background: blue;
+        height: 100%;
+        width: 25vw;
+    }
+
+    .player-butttons {
+        background: red;
+        height: 100%;
+        width: 50vw;
+    }
+
+    .options {
+        background: yellow;
+        height: 100%;
+        width: 25vw;
+    }
+}
