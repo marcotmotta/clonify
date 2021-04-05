@@ -13,29 +13,37 @@
         margin-bottom: 40px;
 
         .tab {
-            padding-left: 30px;
+            padding: 10px 10px 13px 10px;
             display: flex;
             align-items: center;
             height: 40px;
             border-radius: 5px;
             font-weight: bold;
-    
+
             &:hover {
                 background: #222;
                 color: white;
                 cursor: pointer;
+            }
+
+            .icon {
+                margin-right: 10px;
             }
         }
     }
 
     .playlists {
         .create-playlist {
-            padding-left: 30px;
+            padding: 10px 10px 13px 10px;
             display: flex;
             align-items: center;
             height: 40px;
             border-radius: 5px;
             font-weight: bold;
+
+            .icon {
+                margin-right: 10px;
+            }
         }
     }
 
