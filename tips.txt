@@ -10,4 +10,4 @@ $ npm run electron
 
 create new component:
 snippet: rcc
-// Every component musr return one and only one div
+// Every component must return one and only one div
