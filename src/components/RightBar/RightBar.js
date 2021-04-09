@@ -1,42 +1,56 @@
 import React, { Component } from 'react'
+import FriendCard from './FriendCard/FriendCard';
 
 import './RightBar.scss';
 
-import { Avatar } from '@material-ui/core';
-
+// i personally think this component is garbage
+// mostly because of the way the render function handle the users state
+// and also because of the way the query is made
 export default class RightBar extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            users: null
+        };
+    }
+
+    // this runs on the client side once the component loads and renders for the first time
+    componentDidMount () {
+        // Simple GET request using fetch
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => this.setState({users: json}));
+    }
+
     render() {
-        return (
-            <div className="right-bar">
-                <div className="title">Friends activity</div>
-                <div className="friends">
-                    {/* query */}
-                    <div className="activity">
-                        <Avatar className="avatar"></Avatar>
-                        <div>
-                            <div className="username">Friend 1</div>
-                            <div className="artist">Blinding Lights</div>
-                            <div className="song">The Weeknd</div>
-                        </div>
-                    </div>
-                    <div className="activity">
-                        <Avatar className="avatar"></Avatar>
-                        <div>
-                            <div className="username">Friend 2</div>
-                            <div className="artist">Blinding Lights</div>
-                            <div className="song">The Weeknd</div>
-                        </div>
-                    </div>
-                    <div className="activity">
-                        <Avatar className="avatar"></Avatar>
-                        <div>
-                            <div className="username">Friend 3</div>
-                            <div className="artist">Blinding Lights</div>
-                            <div className="song">The Weeknd</div>
-                        </div>
+        const { users } = this.state;
+        if (users) {
+            return (
+                <div className="right-bar">
+                    <div className="title">Friends activity</div>
+                    <div className="friends">
+                        {users.map(user => (
+                            <FriendCard
+                                key={user.name}
+                                name={user.name}
+                                artist={user.company.bs}
+                                song={user.company.name}
+                            />
+                        ))}
                     </div>
                 </div>
-            </div>
-        )
+            )
+        } else {
+            return (
+                <div className="right-bar">
+                    <div className="title">Friends activity</div>
+                    <div className="friends">
+
+                    </div>
+                </div>
+            )
+        }
     }
 }

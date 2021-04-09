@@ -1,0 +1,17 @@
+.friend-card {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    .avatar {
+        margin-right: 10px;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+
+    .artist, .song {
+        font-size: 80%;
+    }
+}

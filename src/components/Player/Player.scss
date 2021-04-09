@@ -52,9 +52,10 @@
     .options {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         height: 100%;
         width: 25vw;
+        margin-right: 30px;
 
         .volume {
             margin-left: 20px;

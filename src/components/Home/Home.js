@@ -15,27 +15,27 @@ export default class Home extends Component {
             <div className="home">
                 <LeftBar></LeftBar>
                 <div className="content">
-                    <Card className="card">
+                   {/*  <div className="card">
                         <div className="test"></div>
-                        <CardContent>
+                        <div className="title">
                             <div><strong>Blinding Lights</strong></div>
                             <div>The Weeknd</div>
-                        </CardContent>
-                    </Card>
-                    <Card className="card">
+                        </div>
+                    </div>
+                    <div className="card">
                         <div className="test"></div>
-                        <CardContent>
+                        <div className="title">
                             <div><strong>Blinding Lights</strong></div>
                             <div>The Weeknd</div>
-                        </CardContent>
-                    </Card>
-                    <Card className="card">
+                        </div>
+                    </div>
+                    <div className="card">
                         <div className="test"></div>
-                        <CardContent>
+                        <div className="title">
                             <div><strong>Blinding Lights</strong></div>
                             <div>The Weeknd</div>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    </div> */}
                 </div>
                 <RightBar></RightBar>
                 <Player></Player>
