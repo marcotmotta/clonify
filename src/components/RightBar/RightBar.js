@@ -1,61 +1,45 @@
-import React, { Component } from 'react'
-import FriendCard from './FriendCard/FriendCard';
+import React from 'react'
 
 import './RightBar.scss';
 
-// i personally think this component is garbage
-// mostly because of the way the render function handle the users state
-// and also because of the way the query is made
+import FriendCard from './FriendCard/FriendCard';
 
-// the thing is, its actually garbage
-// its probably better to use functions intead of classes,
-// and hooks intead of methods
+import { CircularProgress } from '@material-ui/core';
 
-export default class RightBar extends Component {
+export default function RightBar () {
 
-    constructor(props) {
-        super(props);
+    const [users, setUsers] = React.useState([]);
 
-        this.state = {
-            users: null
-        };
-    }
-
-    // this runs on the client side once the component loads and renders for the first time
-    componentDidMount () {
-        // Simple GET request using fetch
+    React.useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
-            .then(json => this.setState({users: json}));
-    }
+            .then(json => setUsers(json));
+    }, [])
 
-    render() {
-        const { users } = this.state;
-        if (users) {
-            return (
-                <div className="right-bar">
-                    <div className="title">Friends activity</div>
-                    <div className="friends">
-                        {users.map(user => (
-                            <FriendCard
-                                key={user.name}
-                                name={user.name}
-                                artist={user.company.bs}
-                                song={user.company.name}
-                            />
-                        ))}
-                    </div>
+    if (users) {
+        return (
+            <div className="right-bar">
+                <div className="title">Friends activity</div>
+                <div className="friends">
+                    {users.map(user => (
+                        <FriendCard
+                            key={user.name}
+                            name={user.name}
+                            artist={user.company.bs}
+                            song={user.company.name}
+                        />
+                    ))}
                 </div>
-            )
-        } else {
-            return (
-                <div className="right-bar">
-                    <div className="title">Friends activity</div>
-                    <div className="friends">
-
-                    </div>
+            </div>
+        )
+    } else {
+        return (
+            <div className="right-bar">
+                <div className="title">Friends activity</div>
+                <div className="loading">
+                    <CircularProgress color="white"/>
                 </div>
-            )
-        }
+            </div>
+        )
     }
 }
