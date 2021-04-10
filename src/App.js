@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './App.scss';
 
 import LeftBar from "./components/LeftBar/LeftBar"
@@ -8,12 +10,15 @@ import Home from "./components/Home/Home"
 import Playlist from "./components/Playlist/Playlist"
 
 function App() {
+
+    const [page, setPage] = React.useState('');
+
     // Every component must return one and only one div
     return (
         <div className="App">
             <div className="content">
                 <LeftBar></LeftBar>
-                <Playlist ></Playlist>
+                <Playlist></Playlist>
                 <RightBar></RightBar>
             </div>
             <Player></Player>

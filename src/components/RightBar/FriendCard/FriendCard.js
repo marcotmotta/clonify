@@ -1,23 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import './FriendCard.scss'
 
 import { Avatar } from '@material-ui/core';
 
-export default class FriendCard extends Component {
-    render() {
+export default function FriendCard (props) {
 
-        let letter = 'U';
+    let altText = 'User';
 
-        return (
-            <div className="friend-card">
-                <Avatar alt={letter} src="" className="avatar"></Avatar>
-                <div>
-                    <div className="username">{this.props.name}</div>
-                    <div className="artist">{this.props.song}</div>
-                    <div className="song">{this.props.artist}</div>
-                </div>
+    return (
+        <div className="friend-card">
+            <Avatar alt={altText} className="avatar"></Avatar>
+            <div>
+                <div className="username">{props.name}</div>
+                <div className="artist">{props.song}</div>
+                <div className="song">{props.artist}</div>
             </div>
-        )
-    }
+        </div>
+    )
 }

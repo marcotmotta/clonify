@@ -6,6 +6,11 @@ import './RightBar.scss';
 // i personally think this component is garbage
 // mostly because of the way the render function handle the users state
 // and also because of the way the query is made
+
+// the thing is, its actually garbage
+// its probably better to use functions intead of classes,
+// and hooks intead of methods
+
 export default class RightBar extends Component {
 
     constructor(props) {

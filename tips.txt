@@ -9,5 +9,5 @@ $ npm start
 $ npm run electron
 
 create new component:
-snippet: rcc
+snippet: rfc (rcc if you want classes intead of functions)
 // Every component must return one and only one div
