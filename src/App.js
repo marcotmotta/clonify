@@ -5,6 +5,7 @@ import RightBar from "./components/RightBar/RightBar"
 import Player from "./components/Player/Player"
 
 import Home from "./components/Home/Home"
+import Playlist from "./components/Playlist/Playlist"
 
 function App() {
     // Every component must return one and only one div
@@ -12,7 +13,7 @@ function App() {
         <div className="App">
             <div className="content">
                 <LeftBar></LeftBar>
-                <Home ></Home>
+                <Playlist ></Playlist>
                 <RightBar></RightBar>
             </div>
             <Player></Player>
