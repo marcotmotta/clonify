@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 
 import './RightBar.scss';
 
@@ -8,15 +8,15 @@ import { CircularProgress } from '@material-ui/core';
 
 export default function RightBar () {
 
-    const [users, setUsers] = React.useState([]);
+    const [users, setUsers] = useState([]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(json => setUsers(json));
     }, [])
 
-    if (users) {
+    if (0) {
         return (
             <div className="right-bar">
                 <div className="title">Friends activity</div>

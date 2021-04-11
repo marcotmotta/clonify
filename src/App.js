@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './App.scss';
 
@@ -11,7 +11,7 @@ import Playlist from "./components/Playlist/Playlist"
 
 function App() {
 
-    const [page, setPage] = React.useState('');
+    const [page, setPage] = useState('');
 
     // Every component must return one and only one div
     return (
