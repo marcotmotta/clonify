@@ -16,7 +16,7 @@ export default function RightBar () {
             .then(json => setUsers(json));
     }, [])
 
-    if (0) {
+    if (users.length) {
         return (
             <div className="right-bar">
                 <div className="title">Friends activity</div>
