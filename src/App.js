@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
 
 import './App.scss';
 
@@ -16,12 +22,19 @@ function App() {
     // Every component must return one and only one div
     return (
         <div className="App">
+            <Router>
             <div className="content">
-                <LeftBar></LeftBar>
-                <Playlist></Playlist>
-                <RightBar></RightBar>
+                <LeftBar />
+
+                <Routes>
+                    <Route path="/playlist" element={<Playlist />}/>
+                    <Route path="/" element={<Home />}/>
+                </Routes>
+
+                <RightBar />
             </div>
-            <Player></Player>
+            <Player />
+            </Router>
         </div>
     );
 }
